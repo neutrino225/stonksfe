@@ -28,23 +28,31 @@
 	<p class="capitalize self-center text-xl font-medium leading-7">
 		Set filter values
 	</p>
+	{#if $filters.length === 0}
+		<div class="w-full h-full flex justify-center items-center">
+			<p class="text-sm font-poppins font-light">No filters selected</p>
+		</div>
+	{/if}
 	{#if $filters.length > 0}
-	<div class="w-full h-full py-4 flex flex-col justify-start items-start gap-2">
-		{#each $filters as filter}
-			<div class="w-full h-max grid grid-cols-2 justify-center items-center">
-				<label class="w-auto capitalize text-lg font-normal leading-6" for={filter}
-					>{filter}</label
-				>
-				<input
-					placeholder={`Enter ${filter}`}
-					class="max-w-full bg-white/10 focus:bg-white/20 rounded-lg px-4 py-2 outline-none text-white border-2 transition-colors duration-100 border-solid focus:border-[#596A95] border-[#2B3040]"
-					type="text"
-					id={filter}
-					name={filter}
-				/>
-			</div>
-		{/each}
-	</div>
+		<div
+			class="w-full h-full py-4 flex flex-col justify-start items-start gap-2"
+		>
+			{#each $filters as filter}
+				<div class="w-full h-max grid grid-cols-3 justify-center items-center">
+					<label
+						class="w-auto capitalize text-md font-normal leading-6"
+						for={filter}>{filter}</label
+					>
+					<input
+						placeholder={`Enter ${filter}`}
+						class="w-full bg-white/10 rounded-lg px-4 py-2 col-span-2 outline-none text-white border-2 focus:bg-white/20 focus:border-blue-500 placeholder-gray-400 transition-all duration-300 shadow-md"
+						type="text"
+						id={filter}
+						name={filter}
+					/>
+				</div>
+			{/each}
+		</div>
 	{/if}
 </div>
 

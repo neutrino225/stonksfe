@@ -15,7 +15,7 @@
 </script>
 
 <div
-	class="relative w-full rounded-lg flex flex-col justify-start items-start gap-4 bg-[#131212] p-4"
+	class="relative w-full rounded-lg flex flex-col justify-start items-start gap-4 bg-[#131212] p-4 hoverShadow"
 >
 	<div class="w-full h-full flex flex-row justify-between items-center">
 		<span class="text-gray-400">Code:</span>
@@ -76,5 +76,13 @@
 		to {
 			stroke-dashoffset: 0;
 		}
+	}
+
+	.hoverShadow:hover {
+		box-shadow: rgba(3, 102, 214, 0.3) 0px 0px 0px 3px;
+	}
+
+	.hoverShadow {
+		transition: all 0.3s ease-in-out;
 	}
 </style>

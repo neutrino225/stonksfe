@@ -16,7 +16,7 @@
             <ListBoxItem
                 bind:group={selectedVisualizationType}
                 name={visualizationType}
-                class="self-start"
+                class="self-start text-md"
                 value={visualizationType}>{visualizationType}</ListBoxItem
             >
         {/each}

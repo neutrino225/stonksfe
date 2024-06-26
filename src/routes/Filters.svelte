@@ -77,7 +77,7 @@
 		class="w-full h-full flex flex-col justify-center items-center p-4 border-slate-800 rounded-b-xl"
 	>
 		{#if selectedFilters.length === 0}
-			<p class="text-sm">No filters selected</p>
+			<p class="text-sm font-light">No filters selected</p>
 		{:else}
 			<div class="flex flex-row justify-start items-center gap-3 flex-wrap">
 				{#each selectedFilters as filterValue}
@@ -121,19 +121,19 @@
 <style>
 	/* Custom styles for chips */
 	[data-dismissible="chip"]:nth-child(odd) {
-		background-color: rgb(51 65 85); /* bg-slate-700 */
+		background-color: hsla(215, 25%, 27%, 0.692); /* bg-slate-700 */
 	}
 
 	[data-dismissible="chip"]:nth-child(even) {
-		background-color: rgb(219 39 119);
+		background-color: hsla(333, 71%, 51%, 0.527);
 	}
 
 	/* Additional contrast variations */
 	[data-dismissible="chip"]:nth-child(3n) {
-		background-color: rgb(124 58 237); /* bg-violet-600 */
+		background-color: hsla(262, 83%, 58%, 0.527); /* bg-violet-600 */
 	}
 
 	[data-dismissible="chip"]:nth-child(4n) {
-		background-color: rgb(34 197 94); /* bg-green-500 */
+		background-color: hsla(142, 71%, 45%, 0.527); /* bg-green-500 */
 	}
 </style>
