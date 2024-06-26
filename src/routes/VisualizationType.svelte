@@ -6,10 +6,11 @@
 </script>
 
 <div class="w-full h-full flex flex-col justify-start items-start gap-5">
-    <h1 class="capitalize self-center text-xl font-semibold leading-7">
-        Visualization Types
-    </h1>
-    <p class="text-base text-white">Select visualization type:</p>
+    <div class="w-full h-full flex flex-col justify-start items-start gap-5 min-h-10">
+        <p class="capitalize self-center text-2xl font-medium leading-7">
+            Visualization Types
+        </p>
+    </div>
     <ListBox class="w-full" active="bg-slate-800">
         {#each visualizationTypes as visualizationType}
             <ListBoxItem

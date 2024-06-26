@@ -4,12 +4,13 @@
 </script>
 
 <div class="w-full h-full flex flex-col justify-start items-start gap-5">
-    <h1 class="capitalize self-center text-xl font-semibold leading-7">
-        Datapoints
-    </h1>
-    <p class="text-base">Select from the following datapoints:</p>
+    <div class="w-full min-h-10 flex flex-col justify-start items-start gap-5">
+        <p class="capitalize self-center font-medium text-2xl leading-7">
+            Datapoints
+        </p>
+    </div>
     <select
-        class="select focus-visible:border-blue-500 "
+        class="bg-slate-800 w-full outline-none border-none rounded-md focus-visible:border-blue-500 "
         name="datapoint"
         id="datapoint"
         bind:value={selectedDatapoint}

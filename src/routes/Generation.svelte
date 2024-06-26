@@ -1,33 +1,51 @@
 <!-- @format -->
 <script lang="ts">
-    import CodeBox from "./CodeBox.svelte";
-    import {selectedFilters} from "$lib/store";
-    import {writable} from "svelte/store";
-    import { onMount } from "svelte";
+	import CodeBox from "./CodeBox.svelte";
+	import { selectedFilters } from "$lib/store";
+	import { writable } from "svelte/store";
+	import { onMount } from "svelte";
 
-    // Local store to keep track of selected filters
-    let filters = writable<string[]>([]);
+	// Local store to keep track of selected filters
+	let filters = writable<string[]>([]);
 
-    // Subscribe to the selectedFilters store
-    onMount(() => {
-        const unsubscribe = selectedFilters.subscribe((value) => {
-            filters.set(value);
-        });
+	// Subscribe to the selectedFilters store
+	onMount(() => {
+		const unsubscribe = selectedFilters.subscribe((value) => {
+			filters.set(value);
+		});
 
-        return () => {
-            unsubscribe();
-        };
-    });
+		return () => {
+			unsubscribe();
+		};
+	});
 
-    export let exampleLink;
+	export let exampleLink;
 </script>
-<div class="w-full h-full bg-slate-900 row-span-2 p-10 flex flex-col justify-start items-start gap-6">
-    {#each $filters as filter}
-        <div class="w-full h-max flex flex-row justify-start items-center gap-5">
-            <label class="capitalize text-md font-normal" for={filter}>{filter}:</label>
-            <input class="min-w-96 max-w-full bg-slate-800 rounded-lg px-4 py-2 outline-none text-white border-2 transition-colors duration-100 border-solid focus:border-[#596A95] border-[#2B3040]" type="text" id={filter} name={filter} />
-        </div>
-    {/each}
+
+<div
+	class="w-full h-full bg-white/10 row-span-2 p-4 flex flex-col justify-start items-start gap-2 divide-y divide-slate-800 rounded-lg"
+>
+	<p class="capitalize self-center text-xl font-medium leading-7">
+		Set filter values
+	</p>
+	{#if $filters.length > 0}
+	<div class="w-full h-full py-4 flex flex-col justify-start items-start gap-2">
+		{#each $filters as filter}
+			<div class="w-full h-max grid grid-cols-2 justify-center items-center">
+				<label class="w-auto capitalize text-lg font-normal leading-6" for={filter}
+					>{filter}</label
+				>
+				<input
+					placeholder={`Enter ${filter}`}
+					class="max-w-full bg-white/10 focus:bg-white/20 rounded-lg px-4 py-2 outline-none text-white border-2 transition-colors duration-100 border-solid focus:border-[#596A95] border-[#2B3040]"
+					type="text"
+					id={filter}
+					name={filter}
+				/>
+			</div>
+		{/each}
+	</div>
+	{/if}
 </div>
 
 <div
@@ -40,7 +58,7 @@
 </div>
 
 <style>
-    .genButton {
+	.genButton {
 		text-decoration: none;
 		position: relative;
 		border: none;

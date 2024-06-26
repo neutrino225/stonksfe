@@ -35,7 +35,11 @@
 			<Filters />
 		</div>
 
-		<div class="w-full min-h-[30rem] bg-white/10 col-span-4"></div>
+		<div class="w-full min-h-[30rem] bg-slate-950/90 previewImage rounded-xl col-span-4 p-4">
+			<div class="imgContainer w-full h-full bg-white/10">
+				
+			</div>
+		</div>
 		<div
 			class="w-full min-h-96 bg-slate-950/90 rounded-xl col-span-3 grid grid-flow-row grid-rows-3 gap-2 p-4"
 		>
@@ -45,5 +49,7 @@
 </section>
 
 <style>
-	
+	.previewImage{
+		box-shadow: rgba(3, 102, 214, 0.3) 0px 0px 0px 3px;
+	}
 </style>
