@@ -14,7 +14,7 @@
 		console.log(value);
 	});
 
-	const exampleLink = `<img src="img_girl.jpg" alt="Girl in a jacket" width="500" height="600">`;
+	const exampleLink = `<img src="img_chania.jpg" alt="Flowers in Chania">`;
 
 </script>
 

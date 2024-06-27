@@ -105,10 +105,10 @@
 						bind:value={description}
 					/>
 					<button
-                    type="submit"
-						class="cursor-pointer flex justify-center bg-gray-800 px-3 py-2 rounded-full text-white tracking-wider shadow-xl hover:bg-gray-900 hover:scale-105 duration-500 hover:ring-1 font-mono w-[150px]"
+						type="submit"
+						class="mb-2 cursor-pointer flex justify-center backdrop-blur p-2 rounded-full text-white tracking-wider shadow-xl duration-500 ring-2 font-mono w-[130px] insetShadow"
 					>
-						Resume
+						Preview
 					</button>
 				</form>
 			</div>
@@ -119,5 +119,9 @@
 <style>
 	.customBoxShadow {
 		box-shadow: rgba(3, 102, 214, 0.3) 0px 0px 0px 3px;
+	}
+
+    .insetShadow:hover {
+		background-color: rgba(3, 102, 214, 0.51) !important;
 	}
 </style>

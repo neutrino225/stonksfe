@@ -1,9 +1,9 @@
 <!-- @format -->
 <script lang="ts">
-	import CodeBox from "./CodeBox.svelte";
 	import { selectedFilters } from "$lib/store";
 	import { writable } from "svelte/store";
 	import { onMount } from "svelte";
+	import { CodeBlock } from "@skeletonlabs/skeleton";
 
 	// Local store to keep track of selected filters
 	let filters = writable<string[]>([]);
@@ -57,7 +57,10 @@
 		</div>
 		<div class="w-full h-max self-end flex justify-center items-center pt-2">
 			<button
-				class="cursor-pointer flex justify-center bg-gray-900 px-3 py-2 rounded-full text-white tracking-wider shadow-xl hover:bg-gray-900 hover:scale-105 duration-500 hover:ring-1 font-mono w-[150px]"
+				on:click={() => {
+					alert("Preview");
+				}}
+				class="cursor-pointer flex justify-center backdrop-blur p-2 rounded-full text-white tracking-wider shadow-xl duration-500 ring-2 font-mono w-[130px] insetShadow"
 			>
 				Preview
 			</button>
@@ -66,12 +69,14 @@
 </div>
 
 <div
-	class="w-full h-full flex flex-row justify-between items-center p-4 gap-10"
+	class="w-full h-full flex flex-row justify-center items-center p-4 gap-10 row-span-1"
 >
+	<CodeBlock language="html" code={exampleLink} />
 	<div class="w-full flex flex-1 justify-center items-center">
-		<button class="genButton">Generate</button>
+		<button class="genButton" on:click={() => alert("genrate link!")}
+			>Generate</button
+		>
 	</div>
-	<CodeBox link={exampleLink} />
 </div>
 
 <style>
@@ -93,21 +98,6 @@
 		z-index: 1;
 	}
 
-	.genButton:hover {
-		animation: ani 2s linear infinite;
-		border: none;
-	}
-
-	@keyframes ani {
-		0% {
-			background-position: 0%;
-		}
-
-		100% {
-			background-position: 400%;
-		}
-	}
-
 	.genButton:before {
 		content: "";
 		position: absolute;
@@ -125,8 +115,11 @@
 	.genButton:hover::before {
 		filter: blur(20px);
 	}
-
 	.genButton:active {
 		background: linear-gradient(32deg, #03a9f4, #f441a5, #ffeb3b, #03a9f4);
+	}
+
+	.insetShadow:hover {
+		background-color: rgba(3, 102, 214, 0.51) !important;
 	}
 </style>
