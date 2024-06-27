@@ -122,6 +122,7 @@
 	}
 
     .insetShadow:hover {
-		background-color: rgba(3, 102, 214, 0.51) !important;
-	}
+		background-color: rgba(48, 118, 199, 0.51) !important;
+		filter: drop-shadow(-4px 2px 12px #005bd1);	
+		}
 </style>

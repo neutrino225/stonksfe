@@ -55,7 +55,7 @@
 				</div>
 			{/each}
 		</div>
-		<div class="w-full h-max self-end flex justify-center items-center pt-2">
+		<div class="w-full h-max self-end flex justify-center items-center p-2">
 			<button
 				on:click={() => {
 					alert("Preview");
@@ -120,6 +120,7 @@
 	}
 
 	.insetShadow:hover {
-		background-color: rgba(3, 102, 214, 0.51) !important;
-	}
+		background-color: rgba(48, 118, 199, 0.51) !important;
+		filter: drop-shadow(-4px 2px 12px #005bd1);	
+		}
 </style>
