@@ -37,7 +37,7 @@
 		</div>
 
 		<div class="w-full min-h-[30rem] bg-slate-950/90 customBoxShadow rounded-xl col-span-4 p-4 flex flex-col justify-center items-center gap-4">
-			<p class="capitalize self-center font-medium text-2xl leading-7">Preview Image</p>
+			<p class="capitalize self-center font-medium text-2xl text-[#FAF9F6] leading-7">Preview Image</p>
 			<ImageContainer link={``} />
 		</div>
 		<div

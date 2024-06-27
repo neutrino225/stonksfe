@@ -51,7 +51,7 @@
 
 <div class="w-full h-full flex flex-col justify-center items-center gap-5 divide-y divide-slate-800">
 	<div class="min-h-10">
-		<p class="self-center text-2xl font-medium leading-7">Filters</p>
+		<p class="self-center text-2xl font-medium text-[#FAF9F6] leading-7">Filters</p>
 	</div>
 	<div class="w-full">
 		<div class="w-full h-full flex flex-col justify-start items-start gap-5">

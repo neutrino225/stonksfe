@@ -25,7 +25,7 @@
 <div
 	class="w-full h-full bg-white/10 row-span-2 p-4 flex flex-col justify-start items-start gap-2 divide-y divide-slate-800 rounded-lg"
 >
-	<p class="capitalize self-center text-xl font-medium leading-7">
+	<p class="capitalize self-center text-xl font-medium leading-7 text-[#FAF9F6]">
 		Set filter values
 	</p>
 	{#if $filters.length === 0}

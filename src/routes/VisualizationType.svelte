@@ -7,7 +7,7 @@
 
 <div class="w-full h-full flex flex-col justify-start items-start gap-5">
     <div class="w-full h-full flex flex-col justify-start items-start gap-5 min-h-10">
-        <p class="capitalize self-center text-2xl font-medium leading-7">
+        <p class="capitalize self-center text-2xl font-medium text-[#FAF9F6] leading-7">
             Visualization Types
         </p>
     </div>

@@ -5,7 +5,7 @@
 
 <div class="w-full h-full flex flex-col justify-start items-start gap-5">
     <div class="w-full min-h-10 flex flex-col justify-start items-start gap-5">
-        <p class="capitalize self-center font-medium text-2xl leading-7">
+        <p class="capitalize self-center font-medium text-[#FAF9F6] text-2xl leading-7">
             Datapoints
         </p>
     </div>
