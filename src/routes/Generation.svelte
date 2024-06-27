@@ -25,7 +25,9 @@
 <div
 	class="w-full h-full bg-white/10 row-span-2 p-4 flex flex-col justify-start items-start gap-2 divide-y divide-slate-800 rounded-lg"
 >
-	<p class="capitalize self-center text-xl font-medium leading-7 text-[#FAF9F6]">
+	<p
+		class="capitalize self-center text-xl font-medium leading-7 text-[#FAF9F6]"
+	>
 		Set filter values
 	</p>
 	{#if $filters.length === 0}
@@ -52,6 +54,13 @@
 					/>
 				</div>
 			{/each}
+		</div>
+		<div class="w-full h-max self-end flex justify-center items-center pt-2">
+			<button
+				class="cursor-pointer flex justify-center bg-gray-900 px-3 py-2 rounded-full text-white tracking-wider shadow-xl hover:bg-gray-900 hover:scale-105 duration-500 hover:ring-1 font-mono w-[150px]"
+			>
+				Preview
+			</button>
 		</div>
 	{/if}
 </div>
